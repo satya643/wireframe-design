@@ -37,7 +37,7 @@ const Features = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative aspect-square w-full max-w-[450px] mx-auto"
+            className="relative aspect-square w-full max-w-[450px] mx-auto "
           >
             <div className="absolute top-0 left-0 w-[60%] aspect-square bg-[#d9d9d9]">
             </div>

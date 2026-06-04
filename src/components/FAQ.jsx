@@ -30,7 +30,7 @@ const FAQ = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="h-72 sm:h-80 bg-gray-300 rounded-3xl flex items-center justify-center overflow-hidden"
+            className="h-72 sm:h-80 bg-gray-300 rounded-sm flex items-center justify-center overflow-hidden"
           >
             <div className="text-gray-500">Image</div>
           </motion.div>
