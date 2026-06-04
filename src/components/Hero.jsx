@@ -26,7 +26,7 @@ const Hero = () => {
             className="w-full lg:w-1/2 flex flex-col justify-center items-start space-y-6 py-16 lg:py-0 lg:pr-8"
           >
             <h1 className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold font-display text-dark-900 leading-tight">
-              Great design is
+              Great design is {' '}
               <br className="hidden md:block" />
               invisible
             </h1>
