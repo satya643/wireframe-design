@@ -41,7 +41,7 @@ const Blog = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold font-display text-dark-900">Latest blog</h2>
+          <h2 className="text-4xl font-bold font-display text-dark-900">Latest Blogs</h2>
         </motion.div>
 
         <motion.div
