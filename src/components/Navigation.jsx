@@ -38,8 +38,9 @@ const Navigation = () => {
                 href={link.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.1, color: '#6366f1' }}
                 transition={{ delay: index * 0.1 }}
-                className="text-gray-700 hover:text-dark-900 transition-colors font-medium"
+                className="text-gray-700 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {link.name}
               </motion.a>
@@ -47,8 +48,9 @@ const Navigation = () => {
             <motion.button
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
+              whileHover={{ x: 2, y: 2 }}
               transition={{ delay: navLinks.length * 0.1 }}
-              className="px-6 py-2 bg-[#111] text-white hover:bg-gray-800 transition-colors text-sm font-semibold"
+              className="px-6 py-2.5 bg-dark-900 text-white border-2 border-dark-900 shadow-[4px_4px_0_0_#4f46e5] hover:shadow-none transition-all text-xs font-bold tracking-widest uppercase rounded-none"
             >
               Get Started
             </motion.button>
@@ -80,7 +82,7 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
-            <button className="mt-2 w-full px-8 py-3 bg-[#111] text-white hover:bg-gray-800 transition-colors text-sm font-semibold">
+            <button className="mt-2 w-full px-8 py-3 bg-dark-900 text-white border-2 border-dark-900 shadow-[4px_4px_0_0_#4f46e5] hover:shadow-none transition-all text-xs font-bold tracking-widest uppercase rounded-none">
               Get Started
             </button>
           </motion.div>

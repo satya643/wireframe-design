@@ -22,11 +22,10 @@ const CTA = () => {
             </p>
           </div>
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors whitespace-nowrap"
+            whileHover={{ x: 4, y: 4 }}
+            className="px-8 py-4 bg-white text-black border-2 border-white shadow-[8px_8px_0_0_#4f46e5] hover:shadow-none transition-all duration-200 text-sm font-bold tracking-widest uppercase rounded-none whitespace-nowrap"
           >
-            Button
+            Contact Us
           </motion.button>
         </motion.div>
       </div>

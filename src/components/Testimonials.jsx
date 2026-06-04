@@ -8,27 +8,27 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Jacqueline Wright',
-      role: 'Cofounder',
-      image: '/images/testimonial-person.jpg',
-      text: 'Lorem ipsum dolor sit amet consectetur. Elementum nid duis tortor sed. Suspendisse labortis vitae quis vehicula pellentesque sit id',
+      role: 'Cofounder at Innovate',
+      image: 'https://i.pravatar.cc/150?img=1',
+      text: 'Working with this team has completely transformed our operational efficiency. Their strategic insights and technical execution are truly unparalleled in the industry.',
     },
     {
-      name: 'Jacqueline Wright',
-      role: 'Cofounder',
-      image: '/images/testimonial-person.jpg',
-      text: 'Lorem ipsum dolor sit amet consectetur. Elementum nid duis tortor sed. Suspendisse labortis vitae quis vehicula pellentesque sit id',
+      name: 'David Chen',
+      role: 'CTO at TechFlow',
+      image: 'https://i.pravatar.cc/150?img=11',
+      text: 'The level of professionalism and the quality of the deliverables exceeded our highest expectations. They are not just vendors; they are true strategic partners.',
     },
     {
       name: 'Sarah Johnson',
-      role: 'CEO at TechCorp',
-      image: '/images/testimonial-person.jpg',
-      text: 'Lorem ipsum dolor sit amet consectetur. Elementum nid duis tortor sed. Suspendisse labortis vitae quis vehicula pellentesque sit id',
+      role: 'CEO at MarketScope',
+      image: 'https://i.pravatar.cc/150?img=5',
+      text: 'Since implementing their solutions, we have seen a 40% increase in productivity. The intuitive design and robust features have made adoption incredibly easy for our team.',
     },
     {
-      name: 'Michael Chen',
+      name: 'Michael Torres',
       role: 'Product Manager',
-      image: '/images/testimonial-person.jpg',
-      text: 'Lorem ipsum dolor sit amet consectetur. Elementum nid duis tortor sed. Suspendisse labortis vitae quis vehicula pellentesque sit id',
+      image: 'https://i.pravatar.cc/150?img=8',
+      text: 'Their agile approach and dedication to solving complex problems have been instrumental in our successful product launch. I highly recommend their services to any scaling startup.',
     },
   ];
 
@@ -46,7 +46,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-[#fcfcfc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -66,12 +66,12 @@ const Testimonials = () => {
           <div className="relative flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-8">
             {/* Left Arrow */}
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: '#4f46e5', color: 'white', boxShadow: '0 0 15px rgba(79, 70, 229, 0.4)' }}
               whileTap={{ scale: 0.95 }}
               onClick={prev}
-              className="flex-shrink-0 p-2 rounded-full bg-white border-2 border-gray-300 text-gray-600 hover:border-gray-400 transition-colors shadow-sm"
+              className="flex-shrink-0 p-3 rounded-full bg-white border border-gray-100 text-gray-500 hover:border-transparent transition-all shadow-sm hover:shadow-xl z-10"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-6 h-6" />
             </motion.button>
 
             {/* Testimonials Cards */}
@@ -81,9 +81,11 @@ const Testimonials = () => {
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -5, boxShadow: '0 20px 50px rgba(79,70,229,0.12)' }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100 flex flex-col"
+                  className="bg-white rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 flex flex-col relative overflow-hidden group transition-all duration-500"
                 >
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-50 to-transparent rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                   {/* Quote Text */}
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6 flex-1">
                     {testimonial.text}
@@ -99,15 +101,11 @@ const Testimonials = () => {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                      className="w-14 h-14 rounded-full border-2 border-primary-50 object-cover mr-4 shadow-sm"
                     />
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        {testimonial.role}
-                      </p>
+                      <h4 className="font-bold text-dark-900 uppercase tracking-widest text-xs">{testimonial.name}</h4>
+                      <p className="text-gray-500 text-xs font-semibold uppercase">{testimonial.role}</p>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -116,12 +114,12 @@ const Testimonials = () => {
 
             {/* Right Arrow */}
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: '#4f46e5', color: 'white', boxShadow: '0 0 15px rgba(79, 70, 229, 0.4)' }}
               whileTap={{ scale: 0.95 }}
               onClick={next}
-              className="flex-shrink-0 p-2 rounded-full bg-white border-2 border-gray-300 text-gray-600 hover:border-gray-400 transition-colors shadow-sm"
+              className="flex-shrink-0 p-3 rounded-full bg-white border border-gray-100 text-gray-500 hover:border-transparent transition-all shadow-sm hover:shadow-xl z-10"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-6 h-6" />
             </motion.button>
           </div>
 
