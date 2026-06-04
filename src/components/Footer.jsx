@@ -74,7 +74,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm">
                 {section.items.map((item, i) => (
                   <li key={i}>
-                    <a href="#" className="text-gray-500 hover:text-dark-900 transition-colors">
+                    <a href="/" className="text-gray-500 hover:text-dark-900 transition-colors">
                       {item}
                     </a>
                   </li>

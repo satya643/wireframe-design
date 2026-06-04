@@ -65,7 +65,7 @@ const Blog = () => {
               <div className="p-6">
                 <h3 className="font-bold text-dark-900 mb-2">{post.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
-                <a href="#" className="text-dark-900 font-semibold text-sm hover:text-primary-600">
+                <a href="/" className="text-dark-900 font-semibold text-sm hover:text-primary-600">
                   learn more →
                 </a>
               </div>
